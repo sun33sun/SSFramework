@@ -10,7 +10,7 @@ namespace ProjectBase.UI
 	{
 		private void Start()
 		{
-			UIManager.LoadPrefabAsync();
+			UIManager.Preload();
 		}
 
 		private void Update()
@@ -19,7 +19,7 @@ namespace ProjectBase.UI
 			{
 				UniTask.Void(async () =>
 				{
-					TestPanel testPanel = await UIManager.OpenFade<TestPanel>();
+					TestPanel testPanel = await UIManager.OpenAsync<TestPanel>();
 				});
 			}
 		}

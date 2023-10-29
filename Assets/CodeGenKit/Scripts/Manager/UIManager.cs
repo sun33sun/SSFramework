@@ -9,6 +9,7 @@ using DG.Tweening;
 
 namespace ProjectBase.UI
 {
+
 	public enum ManagerState
 	{
 		None, Loading, Loaded
@@ -21,15 +22,21 @@ namespace ProjectBase.UI
 		static Dictionary<string, UIController> prefabDic = new Dictionary<string, UIController>();
 		static Dictionary<string, UIController> instanceDic = new Dictionary<string, UIController>();
 
+		static List<UIController> uiStack = new List<UIController>();
+
+		static UIAnimHepler animHepler = null;
+
 		public static ManagerState loadState { get; private set; }
 
-		public static void LoadPrefabAsync()
+		public static void Preload()
 		{
 			if (loadState != ManagerState.None)
 				return;
 
 			loadState = ManagerState.Loading;
-
+			//生成UIAnimHelper
+			animHepler = new UIAnimHepler();
+			//读取预制体
 			TextAsset textAsset = Resources.Load<TextAsset>(CodeGenSetting.PrefabJsonName);
 			string json = textAsset.text;
 			Dictionary<string, string> dic = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
@@ -42,13 +49,27 @@ namespace ProjectBase.UI
 			loadState = ManagerState.Loaded;
 		}
 
+		public static T Get<T>() where T : UIController
+		{
+			Type type = typeof(T);
+			if (instanceDic.ContainsKey(type.Name))
+			{
+				return instanceDic[type.Name] as T;
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+
 		#region 创建
 		/// <summary>
 		/// 加载预制体
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		static T Load<T>() where T : UIController
+		static T Create<T>() where T : UIController
 		{
 			Type type = typeof(T);
 			if (instanceDic.ContainsKey(type.Name))
@@ -63,63 +84,65 @@ namespace ProjectBase.UI
 
 		public static T Open<T>() where T : UIController
 		{
-			T t = Load<T>();
+			T t = Create<T>();
+			uiStack.Add(t);
 			t.group.alpha = 1;
 			t.group.interactable = true;
 
 			return t;
 		}
 
-		public static async UniTask<T> OpenFade<T>() where T : UIController
+		public static async UniTask<T> OpenAsync<T>(UIAnimType animType = UIAnimType.FadeIn) where T : UIController
 		{
-			T t = Load<T>();
-			await t.group.DOFade(1, ShowTime).AsyncWaitForCompletion();
+			T t = Create<T>();
+			uiStack.Add(t);
+			//动画
+			await animHepler.DoAnim(animType, t);
+			//放开交互
 			t.group.interactable = true;
 			return t;
 		}
+		
+		public static void UnrecordOpen<T>()where T : UIController
+		{
+			T t = Create<T>();
+			t.gameObject.SetActive(false);
+		}
+		
 		#endregion
 
 		#region 关闭
-		static KeyValuePair<string, UIController> Pop()
-		{
-			KeyValuePair<string, UIController> pair = instanceDic.Last();
-			instanceDic.Remove(pair.Key);
-			return pair;
-		}
-
 		public static void Close()
 		{
-			if (instanceDic.Count < 1)
+			if (uiStack.Count < 1)
 				return;
-			GameObject.Destroy(Pop().Value);
-		}
-
-		public static async UniTask CloseFade()
-		{
-			if (instanceDic.Count < 1)
-				return;
-
-			UIController controller = Pop().Value;
-			controller.group.interactable = false;
-			//动画
-			await controller.group.DOFade(0, ShowTime).AsyncWaitForCompletion();
+			UIController controller = uiStack.Last();
+			//移除
+			instanceDic.Remove(controller.GetType().Name);
+			if(uiStack.Contains(controller))
+				uiStack.Remove(controller);
 			//销毁
 			GameObject.Destroy(controller);
 		}
-		#endregion
 
-		public static T Get<T>() where T : UIController
+		public static async UniTask CloseAsync(UIAnimType animType = UIAnimType.FadeOut)
 		{
-			Type type = typeof(T);
-			if (instanceDic.ContainsKey(type.Name))
-			{
-				return instanceDic[type.Name] as T;
-			}
-			else
-			{
-				return null;
-			}
+			if (instanceDic.Count < 1)
+				return;
+
+			UIController controller = uiStack.Last();
+			controller.group.interactable = false;
+			//动画
+			await animHepler.DoAnim(animType, controller);
+			//移除
+			instanceDic.Remove(controller.GetType().Name);
+			if (uiStack.Contains(controller))
+				uiStack.Remove(controller);
+			//销毁
+			GameObject.Destroy(controller);
 		}
+
+		#endregion
 
 		#region 显示
 		public static void Show<T>() where T : UIController
