@@ -1,0 +1,86 @@
+[
+	{
+		"choiceType": 1,
+		"strHead": "第1题",
+		"optionDic": {
+			"A": "第1题选项A",
+			"B": "第1题选项B",
+			"C": "第1题选项C",
+			"D": "第1题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 1,
+		"score": 1.0,
+		"strAnalysis": "第1题分析"
+	},
+	{
+		"choiceType": 0,
+		"strHead": "第2题",
+		"optionDic": {
+			"A": "第2题选项A",
+			"B": "第2题选项B",
+			"C": "第2题选项C",
+			"D": "第2题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 0,
+		"score": 1.0,
+		"strAnalysis": "第2题分析"
+	},
+	{
+		"choiceType": 0,
+		"strHead": "第3题",
+		"optionDic": {
+			"A": "第3题选项A",
+			"B": "第3题选项B",
+			"C": "第3题选项C",
+			"D": "第3题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 0,
+		"score": 1.0,
+		"strAnalysis": "第3题分析"
+	},
+	{
+		"choiceType": 0,
+		"strHead": "第4题",
+		"optionDic": {
+			"A": "第4题选项A",
+			"B": "第4题选项B",
+			"C": "第4题选项C",
+			"D": "第4题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 0,
+		"score": 1.0,
+		"strAnalysis": "第4题分析"
+	},
+	{
+		"choiceType": 0,
+		"strHead": "第5题",
+		"optionDic": {
+			"A": "第5题选项A",
+			"B": "第5题选项B",
+			"C": "第5题选项C",
+			"D": "第5题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 0,
+		"score": 1.0,
+		"strAnalysis": "第5题分析"
+	},
+	{
+		"choiceType": 0,
+		"strHead": "第6题",
+		"optionDic": {
+			"A": "第6题选项A",
+			"B": "第6题选项B",
+			"C": "第6题选项C",
+			"D": "第6题选项D"
+		},
+		"multipleRights": [],
+		"singleRight": 0,
+		"score": 1.0,
+		"strAnalysis": "第6题分析"
+	}
+]

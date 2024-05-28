@@ -1,0 +1,322 @@
+[
+	{
+		"Id": 1,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤的组成药物是（）",
+		"OptionDic": {
+			"A": "附子、干姜、炙甘草",
+			"B": "附子、生姜、炙甘草",
+			"C": "柴胡、白芍、枳实、甘草",
+			"D": "人参、附子、干姜、炙甘草",
+			"E": "附子、干姜、葱白"
+		},
+		"MultipleRights": [],
+		"SingleRight": 5,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 2,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤主治症的病机是（）",
+		"OptionDic": {
+			"A": "心肾阳衰，阴寒内盛",
+			"B": "脾肾阳虚，水湿内停",
+			"C": "心肾阳虚，水湿内停",
+			"D": "心阳不足，瘀血阻滞",
+			"E": "肾阳不足，精亏血少"
+		},
+		"MultipleRights": [],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 3,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤的功效是（）",
+		"OptionDic": {
+			"A": "透邪解郁，疏肝理脾",
+			"B": "行气活血",
+			"C": "回阳救逆",
+			"D": "温经散寒，养血通脉",
+			"E": "回阳固脱，益气生脉"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 4,
+		"ChoiceType": 1,
+		"StrHead": "（单选）患者四肢厥冷，恶寒蜷卧，神衰欲寐，面色苍白，腹痛下利，呕吐不渴，舌苔白滑，脉细微。治宜选用（   ）",
+		"OptionDic": {
+			"A": "四逆散",
+			"B": "四逆汤",
+			"C": "当归四逆汤",
+			"D": "理中丸",
+			"E": "真武汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 2,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 5,
+		"ChoiceType": 2,
+		"StrHead": "（多选）四逆汤中炙甘草的作用是（）",
+		"OptionDic": {
+			"A": "益气补中",
+			"B": "甘缓姜、附峻烈之性",
+			"C": "调和诸药",
+			"D": "为佐药兼使药之用",
+			"E": "酸甘化阴"
+		},
+		"MultipleRights": [1, 2, 3, 4],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 6,
+		"ChoiceType": 1,
+		"StrHead": "（单选）药物配伍精当，功专效宏，能救人于顷刻之间，速达回阳之效，使阳复厥回的方剂是（   ）",
+		"OptionDic": {
+			"A": "四逆汤",
+			"B": "四逆散",
+			"C": "当归四逆汤",
+			"D": "理中丸",
+			"E": "小建中汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 7,
+		"ChoiceType": 1,
+		"StrHead": "（单选）以下属于温里剂的方剂是（）",
+		"OptionDic": {
+			"A": "桂枝汤",
+			"B": "温胆汤",
+			"C": "四逆汤",
+			"D": "肾气丸",
+			"E": "参苓白术散"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 8,
+		"ChoiceType": 1,
+		"StrHead": "（单选）以下用生附子的方剂是（）",
+		"OptionDic": {
+			"A": "真武汤",
+			"B": "麻黄细辛附子汤",
+			"C": "大黄附子汤",
+			"D": "肾气丸",
+			"E": "四逆汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 5,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 9,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤主治证中无下列何项（）",
+		"OptionDic": {
+			"A": "恶寒肢厥",
+			"B": "呕吐下利",
+			"C": "神衰欲寐",
+			"D": "舌苔白滑",
+			"E": "脉细数"
+		},
+		"MultipleRights": [],
+		"SingleRight": 5,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 10,
+		"ChoiceType": 1,
+		"StrHead": "（单选）患者阳衰阴盛，四肢厥逆，恶寒蜷卧，口不渴，舌淡苔白，脉沉细，治宜用（）",
+		"OptionDic": {
+			"A": "四逆汤",
+			"B": "四逆散",
+			"C": "当归四逆汤",
+			"D": "乌梅丸",
+			"E": "大承气汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 11,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤的证治要点有（）",
+		"OptionDic": {
+			"A": "腰、股冷痛",
+			"B": "心中悸动",
+			"C": "阳虚失血",
+			"D": "神衰欲寐",
+			"E": "手足烦热"
+		},
+		"MultipleRights": [],
+		"SingleRight": 4,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 12,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤中用的姜是（）",
+		"OptionDic": {
+			"A": "生姜",
+			"B": "干姜",
+			"C": "炮姜",
+			"D": "煨姜",
+			"E": "良姜"
+		},
+		"MultipleRights": [],
+		"SingleRight": 2,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 13,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤主治为（）",
+		"OptionDic": {
+			"A": "少阴病阳衰寒厥证",
+			"B": "血虚寒厥证",
+			"C": "阳郁厥逆证",
+			"D": "热厥证",
+			"E": "虚寒呕吐少阴病阳虚寒厥证"
+		},
+		"MultipleRights": [],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 14,
+		"ChoiceType": 1,
+		"StrHead": "（单选）“回阳救逆第一品药”是（）",
+		"OptionDic": {
+			"A": "附子",
+			"B": "干姜",
+			"C": "肉桂",
+			"D": "桂枝",
+			"E": "吴茱萸"
+		},
+		"MultipleRights": [],
+		"SingleRight": 1,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 15,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤中厥逆的机理是（）",
+		"OptionDic": {
+			"A": "阳气内郁不达四末",
+			"B": "肝郁气滞",
+			"C": "阳衰阳盛",
+			"D": "元气大亏阳气暴脱",
+			"E": "血虚寒凝经脉"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 16,
+		"ChoiceType": 1,
+		"StrHead": "（单选）以下可治疗“太阳病误汗亡阳”的方剂是（）",
+		"OptionDic": {
+			"A": "理中丸",
+			"B": "四逆散",
+			"C": "四逆汤",
+			"D": "大承气汤",
+			"E": "小建中汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 17,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤中回阳救逆的基本配伍是（）",
+		"OptionDic": {
+			"A": "附子、生姜",
+			"B": "附子、生甘草",
+			"C": "附子、炙甘草",
+			"D": "附子、干姜",
+			"E": "炙甘草、干姜"
+		},
+		"MultipleRights": [],
+		"SingleRight": 4,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 18,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤的君药是（）",
+		"OptionDic": {
+			"A": "干姜",
+			"B": "生姜",
+			"C": "生附子",
+			"D": "炙甘草",
+			"E": "人参"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 19,
+		"ChoiceType": 1,
+		"StrHead": "（单选）治疗少阴心肾阳衰寒厥证之基础方是（）",
+		"OptionDic": {
+			"A": "四逆散",
+			"B": "四逆汤",
+			"C": "当归四逆汤",
+			"D": "四逆加人参汤",
+			"E": "通脉四逆汤"
+		},
+		"MultipleRights": [],
+		"SingleRight": 2,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	},
+	{
+		"Id": 20,
+		"ChoiceType": 1,
+		"StrHead": "（单选）四逆汤出自（）",
+		"OptionDic": {
+			"A": "《伤寒六书》",
+			"B": "《金匮要略》",
+			"C": "《伤寒论》",
+			"D": "《温病条辨》",
+			"E": "《伤寒来苏集》"
+		},
+		"MultipleRights": [],
+		"SingleRight": 3,
+		"Score": 1.0,
+		"StrAnalysis": ""
+	}
+]
