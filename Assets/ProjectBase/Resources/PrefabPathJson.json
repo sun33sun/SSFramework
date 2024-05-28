@@ -1,0 +1,11 @@
+﻿{
+	"MainPanel": "UIPanelPrefab/MainPanel",
+	"BottomPanel": "UIPanelPrefab/BottomPanel",
+	"ExaminePanel": "UIPanelPrefab/ExaminePanel",
+	"TopPanel": "UIPanelPrefab/TopPanel",
+	"ReportItem": "GameController/ReportItem",
+	"ReportPanel": "UIPanelPrefab/ReportPanel",
+	"ProfilePanel": "UIPanelPrefab/ProfilePanel",
+	"GamePanel": "UIPanelPrefab/GamePanel",
+	"ModelPanel": "UIPanelPrefab/ModelPanel"
+}
