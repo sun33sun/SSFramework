@@ -7,12 +7,8 @@ using UnityEngine;
 
 namespace ProjectBase
 {
-	public class ProjectBaseSettings
+	public static class ProjectBaseSettings
 	{
-		// public static string PAPER { get { return Application.streamingAssetsPath + "/ExamJson/"; } }
-		//
-		// public static string DialogueInfo { get { return Application.streamingAssetsPath + "/DialogueInfo.json"; } }
-		//
-		// public const string UI = "Resources/UIPanel/";
+		public const float Frame5 = 0.0833333333333333f;
 	}
 }

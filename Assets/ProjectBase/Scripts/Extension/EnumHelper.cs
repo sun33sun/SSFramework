@@ -41,14 +41,20 @@ namespace ProjectBase.EnumExtension
 			for (int i = 0; i < arr1.Length; i++)
 			{
 				object obj = arr1.GetValue(i);
-				int value = obj.GetHashCode();
+				int hashCode = obj.GetHashCode();
 				string strArr = obj.ToString();
 				FieldInfo fieldInfo = type.GetField(strArr);
 				DescriptionAttribute descriptionAttribute = fieldInfo.GetCustomAttribute(descriptionType) as DescriptionAttribute;
+				string description;
 				if (descriptionAttribute != null)
 				{
-					string description = descriptionAttribute.Description;
-					newDic.Add((T)Enum.ToObject(type, value), new KeyValuePair<int, string>(value, description));
+					description = descriptionAttribute.Description;
+					newDic.Add((T)Enum.ToObject(type, hashCode), new KeyValuePair<int, string>(hashCode, description));
+				}
+				else
+				{
+					description = strArr;
+					newDic.Add((T)Enum.ToObject(type, hashCode), new KeyValuePair<int, string>(hashCode, description));
 				}
 			}
 			_enumDic.Add(type, newDic);
@@ -128,6 +134,34 @@ namespace ProjectBase.EnumExtension
 			if (i2 < 0)
 				i2 = _enumDic[type].Values.Sum(value => value.Key);
 			return i1 == i2;
+		}
+
+		public static IEnumerable<T> All<T>() where T : Enum
+		{
+			Type type = typeof(T);
+			AddToDic<T>(type);
+
+			return _enumDic[type].Keys.ToArray().Cast<T>();
+		}
+
+		public static IEnumerable<string> ToStringAll<T>() where T : Enum
+		{
+			Type type = typeof(T);
+			AddToDic<T>(type);
+
+			return _enumDic[type].Keys.Select(k => k.ToString());
+		}
+
+		public static IEnumerable<string> ToStringAll<T>(Action<string> action) where T : Enum
+		{
+			Type type = typeof(T);
+			AddToDic<T>(type);
+
+			Dictionary<Enum, KeyValuePair<int, string>> dic = _enumDic[type];
+			IEnumerable<string> list = dic.Values.Select(valuePair => valuePair.Value);
+			foreach (var item in list)
+				action(item);
+			return list;
 		}
 	}
 }
